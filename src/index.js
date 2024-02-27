@@ -25,7 +25,7 @@ app.use("/", (req,res) => {
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, ()=> {
-  console.log(`Servidor escuchando en puerto ${PORT}`)
+  console.log(`Servidor escuchando en puerto  ${PORT}`)
 
   sequelize.sync({force: true})
   .then(() => console.log("Conexión a la base de datos concesionarios"))
