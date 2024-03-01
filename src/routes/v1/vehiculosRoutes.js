@@ -7,4 +7,10 @@ vehiculosrouter.get("/", async (req, res) =>{
     res.json(Vehiculos)
 })
 
+vehiculosrouter.get('/:nombre', async (req, res) =>{
+    const nombre_veh = req.params.nombre
+    const Vehiculos = await Vehiculo.findOne({where: { nombre_veh }})
+    res.json(Vehiculos)
+})
+
 module.exports = vehiculosrouter
