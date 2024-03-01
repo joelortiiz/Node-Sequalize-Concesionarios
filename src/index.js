@@ -20,14 +20,14 @@ const router = require("./routes/v1/appRoutes.js")
 
 app.use("/", router)
 app.use("/", (req,res) => {
-  res.send("conn")
+  res.send("conectado")
 })
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, ()=> {
   console.log(`Servidor escuchando en puerto  ${PORT}`)
 
-  sequelize.sync({force: true})
+  sequelize.sync({force: false})
   .then(() => console.log("Conexión a la base de datos concesionarios"))
   .then(() => console.log("Tablas sincronizadas"))
   .catch((error)=> console.log("Error: "+error))
