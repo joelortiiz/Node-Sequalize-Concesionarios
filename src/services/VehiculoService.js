@@ -1,5 +1,4 @@
 const Vehiculo = require('../bd/models/Vehiculo')
-const Vehiculo = require('../bd/models/Vehiculo')
 
 const getAllVehiculos = async()=> {
     const Vehiculos = await Vehiculo.findAll()
@@ -12,6 +11,6 @@ const getOneVehiculo = async(nombre)=> {
 module.exports = {
     getAllVehiculos,
     getOneVehiculo,
-    
+
 }
 
