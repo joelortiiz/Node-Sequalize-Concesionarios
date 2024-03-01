@@ -5,12 +5,16 @@ const getAllVehiculos = async()=> {
     return Vehiculos
 }
 const getOneVehiculo = async(nombre)=> {
-    const Vehiculos = await Vehiculo.findOne({where: {nombre_veh : nombre}})
+    const Vehiculos = await Vehiculo.findOne({where: {nombre_veh: nombre}})
+    return Vehiculos
+}
+const deleteVehiculo = async(id)=> {
+    const Vehiculos = await Vehiculo.destroy({where: {id_veh: id}})
     return Vehiculos
 }
 module.exports = {
     getAllVehiculos,
     getOneVehiculo,
-
+    deleteVehiculo
 }
 
