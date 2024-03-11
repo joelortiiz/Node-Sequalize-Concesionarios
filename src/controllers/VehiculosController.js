@@ -17,9 +17,16 @@ const deleteVehiculo = async(req, res)=> {
     const Vehiculos = await VehiculosService.deleteVehiculo(id)
     res.json(Vehiculos)
 }
+const updateVehiculoById = async(req, res)=> {
+    const id = req.params.id
+    const veh = req.body
+    const Vehiculos = await VehiculosService.updateVehiculoById(id, veh)
+    res.json(Vehiculos)
+}
 
 module.exports = {
     getAllVehiculos,
     getOneVehiculo,
-    deleteVehiculo
+    deleteVehiculo,
+    updateVehiculoById
 }

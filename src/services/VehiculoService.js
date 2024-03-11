@@ -9,7 +9,7 @@ const getOneVehiculo = async(nombre)=> {
     return Vehiculos
 }
 const updateVehiculoById = async(id, veh)=> {
-    const Vehiculos = await Vehiculo.create(veh, {
+    const Vehiculos = await Vehiculo.update(veh, {
         where: {
             id_veh : id
         }
