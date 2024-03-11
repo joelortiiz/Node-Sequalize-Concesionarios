@@ -15,7 +15,8 @@ const getAllCompras = async()=> {
                 include:[
                     {
                         model: Fabricante,
-                        attributes: ['nombre_fab']
+                        attributes: ['nombre_fab'],
+                   
                     }]
             }], attributes:['precio_compra', 'fecha_compra']
         }

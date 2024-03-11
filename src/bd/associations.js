@@ -13,8 +13,6 @@ Vehiculo.belongsToMany(Cliente, {through: Compra})
 Vehiculo.hasMany(Compra)
 Compra.belongsTo(Vehiculo)
 
-
-
 Cliente.hasMany(Compra)
 Compra.belongsTo(Cliente)
 
